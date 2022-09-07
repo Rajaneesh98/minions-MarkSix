@@ -4,6 +4,8 @@ let textInput = document.querySelector("#text-area");
 
 let textOutput = document.querySelector("#output");
 
+let errorOutput = document.querySelector("#empty-error");
+
 // let url = "https://lessonfourapi.tanaypratap.repl.co/translate/yoda.json";  //dummy url for practise
 
 let url = "https://api.funtranslations.com/translate/minion.json";
@@ -19,6 +21,10 @@ function errorHandler(error) {
 
 function clickHandler() {
   let text = textInput.value;
+  if (!text || !text.trim()) {
+    console.log("text:", text);
+    return (errorOutput.innerText = "Enter Something in English");
+  }
 
   fetch(geturl(text))
     .then((response) => response.json())
