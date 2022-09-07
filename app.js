@@ -23,7 +23,7 @@ function clickHandler() {
   let text = textInput.value;
   if (!text || !text.trim()) {
     console.log("text:", text);
-    return (errorOutput.innerText = "Enter Something in English");
+    return (errorOutput.innerText = '"Enter Something in English!"');
   }
 
   fetch(geturl(text))

@@ -82,4 +82,7 @@ h3 {
 #empty-error {
   margin: 10px;
   padding: 1rem;
+  color: red;
+  text-align: center;
+  font-size: 20px;
 }
